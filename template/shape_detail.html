@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <a href="{% url 'logout' %}">
+    <button type="button" name="button">Logout</button></a>
+    <form method="post">
+      {% csrf_token%}
+      {{form.as_p}}
+      <button type="submit" name="button">Submit</button>
+    </form>
+  </body>
+</html>
