@@ -19,7 +19,7 @@ from map import views
 from django.contrib.auth import views as auth_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.map),
+    url(r'^$', views.map, name = 'map'),
     url(r'^shape', views.shape,name = 'shape'),
     url(r'^signup',views.register,name = 'register'),
     url(r'^accounts/login/',auth_views.LoginView.as_view(template_name = 'accounts/login.html'), name = 'login'),
